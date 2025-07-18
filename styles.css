@@ -1,0 +1,454 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  background: #fff;
+  padding: 24px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.nav-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.nav-link.active,
+.nav-link:hover {
+  color: #219653;
+  text-decoration: underline;
+}
+.btn {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #219653;
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.btn:hover {
+  background: #17643a;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero {
+  padding: 120px 0 60px 0;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%);
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+.hero-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-style: italic;
+  color: #222;
+  margin-bottom: 10px;
+}
+.hero-tagline {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  background: #222;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.download-btn i {
+  font-size: 1.7rem;
+}
+.download-btn:hover {
+  background: #219653;
+  transform: translateY(-3px);
+}
+
+/* App Preview Section */
+.app-preview {
+  padding: 80px 0 40px 0;
+  text-align: center;
+  background: #fff;
+}
+.phone-mockup {
+  width: 320px;
+  height: 600px;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  margin: 0 auto 32px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.app-preview-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.ad-free {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Stats Section */
+.stats {
+  padding: 80px 0 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.stats-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+}
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.rating-score {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #222;
+}
+.laurel {
+  font-size: 2rem;
+  color: #FFD700;
+}
+.stats-reviews {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+.feature-card {
+  background: #fff;
+  padding: 36px 28px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  transition: transform 0.2s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-card h3 {
+  font-size: 1.4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #219653;
+  margin-bottom: 16px;
+}
+.feature-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 80px 0 40px 0;
+  background: #fff;
+}
+.testimonials-container {
+  position: relative;
+}
+.testimonials-phone {
+  width: 320px;
+  height: 600px;
+  background: transparent;
+  border: none;
+  border-radius: 40px;
+  margin: 0 auto 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+.testimonial {
+  background: #fff;
+  padding: 28px 22px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.cta-section {
+  text-align: center;
+  margin-top: 60px;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+.cta-section p {
+  color: #666;
+  margin-bottom: 32px;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+.faq-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+.faq-left h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+.faq-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 20px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-question:hover {
+  color: #219653;
+}
+
+.faq-question span:first-child {
+  font-weight: 600;
+  color: #222;
+  flex: 1;
+}
+
+.expand {
+  font-size: 1.5rem;
+  color: #219653;
+  font-weight: 700;
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 0.3s ease, opacity 0.3s ease;
+  display: none;
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-answer p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item.active .expand {
+  transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+  max-width: 400px;
+  opacity: 1;
+  display: block;
+}
+
+/* Social Section */
+.social {
+  padding: 80px 0 40px 0;
+  background: #fff;
+  text-align: center;
+}
+.social h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 30px;
+}
+.social-icon {
+  font-size: 2.2rem;
+  color: #219653;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  background: #f8fafc;
+  padding: 60px 0 40px 0;
+  text-align: center;
+}
+.footer-content h3 {
+  font-size: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #219653;
+  margin-bottom: 20px;
+}
+.footer-content p {
+  color: #666;
+  margin-bottom: 10px;
+}
+.copyright {
+  font-size: 0.9rem;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .features-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  .faq-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .phone-mockup, .testimonials-phone {
+    width: 100%;
+    height: 320px;
+    font-size: 1em;
+  }
+  .header-container, .nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .btn, .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+} 
